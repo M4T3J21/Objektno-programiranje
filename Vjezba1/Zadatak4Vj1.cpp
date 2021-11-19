@@ -5,7 +5,7 @@ using namespace std;
 void input(int* arr, int arrsize)
 {
     int i = 0;
-    for (i; i < arrsize; i++) // Dok god nam je i manji od broja clanova koje smo unijeli, unosimo clanove niza u zadati niz //
+    for (i; i < arrsize; i++)
     {
         cout << i << "-ti clan niza je: " << endl;
         cin >> arr[i];
@@ -14,7 +14,7 @@ void input(int* arr, int arrsize)
 
 int smallest(int* arr, int size, int min)
 {
-    if (min > arr[size]) // Isto kao i u zadatku 3, gledamo da li nam je trenutni clan veci od minimuma i ako jest, postavljamo njega kao novi minimum //
+    if (min > arr[size]) // If the current number is lower than min it becomes the min in the next line //
         min = arr[size];
     if (size == 0)
         return min;
@@ -23,7 +23,7 @@ int smallest(int* arr, int size, int min)
 
 int biggest(int* arr, int size, int max)
 {
-    if (max < arr[size]) // Isto kao i u zadatku 3, gledamo da li nam je trenutni clan manji od maksimuma i ako jest, postavljamo njega kao novi maksimum //
+    if (max < arr[size]) 
         max = arr[size];
     if (size == 0)
         return max;
