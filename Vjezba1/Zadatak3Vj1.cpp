@@ -4,7 +4,7 @@ using namespace std;
 void input(int* arr, int arrsize)
 {
     int i=0;
-    for (i; i < arrsize; i++) // Dok god nam je i manji od broja clanova koje smo unijeli, unosimo clanove niza u zadati niz //
+    for (i; i < arrsize; i++) 
     {
         cout << i << "-ti clan niza je: "<< endl;
         cin >> arr[i];
@@ -28,20 +28,20 @@ void maxmin(int *niz, int *max1, int *min1, int n)
 void smallest(int* arr, int* min, int arrsize)
 {
     int i;
-    *min = arr[0]; //Postavljamo minimum eg. najmanji clan niza na prvi clan([0]) //
+    *min = arr[0]; //Number with index 0 is set as the smallest value of array//
     for (i = 0; i <= arrsize; i++)
     {
-        if (arr[i] < *min) // Ako nam je i-ti clan manji od maksimuma odnosno arr[0], taj clan postaje novi najmanji clan tj minimum //
+        if (arr[i] < *min) // If the number with index i is smaller than min it becomes the min //
             *min = arr[i];
     }
 }
 void biggest(int* arr, int* max, int arrsize)
 {
     int i;
-    *max = arr[0]; //Postavljamo maksimum eg. najveci clan niza na prvi clan([0]) //
+    *max = arr[0]; 
     for (i = 0; i <= arrsize; i++)
     {
-        if (arr[i] > *max) // Ako nam je i-ti clan veci od maksimuma odnosno arr[0], taj clan postaje novi najveci clan tj maksimum //
+        if (arr[i] > *max) 
             *max = arr[i];
     }
 }
@@ -50,11 +50,11 @@ int main()
     int big, small, velniza, *niz;
     cout << "Unesite velicinu vaseg niza: " << endl;
     cin >> velniza;
-    niz = (int*)malloc(velniza * sizeof(int)); // Alociramo memoriju za nas niz //
+    niz = (int*)malloc(velniza * sizeof(int)); // Alocating memory for the array //
     input(niz, velniza);
     biggest(niz, &big, velniza - 1);
     smallest(niz, &small, velniza - 1);
     cout << "Najveci clan u nizu je:  " << big << endl;
     cout << "Najmanji clan u nizu je: " << small << endl;
-    free(niz); // Po zavrsetku oslobadjamo memoriju koju smo prethodno "rezervirali" za nas niz //
+    free(niz); // #FREEMEMORY //
 }
