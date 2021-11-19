@@ -1,10 +1,10 @@
 #include <iostream>
 #include <iomanip>
-using namespace std; // Ovim su uklonjena sva std:: ispdred cout i cin //
+using namespace std; 
 int main()
 {
 	bool flag;
-	cout << "unesi " << noboolalpha << true << " - " << false << endl; // Dodano je nooboolalpha pa ispisujemo bool kao int 0 ili 1 //
+	cout << "unesi " << noboolalpha << true << " - " << false << endl; 
 	cin >> flag;
 	cout << boolalpha << flag << endl; 
 	int a = 28391237914;
