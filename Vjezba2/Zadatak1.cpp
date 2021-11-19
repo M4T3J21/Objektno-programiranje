@@ -1,23 +1,23 @@
 #include <iostream>
 using namespace std;
-void ArrIn(int* arr, int sizearr) // Unosimo niz
+void ArrIn(int* arr, int sizearr) 
 {
 	for (int i = 0; i < sizearr; i++)
 	{
-		cin >> arr[i]; // Unosimo clanove jedan po jedan
+		cin >> arr[i]; 
 	}
 }
-void MinAndMax(int* arr, int sizearr, int& smol, int& bigg) // Trazimo najveci i najmanji clan niza
+void MinAndMax(int* arr, int sizearr, int& smol, int& bigg) // Search for the biggest and smallest ones
 {
 	for (int i = 0; i < sizearr; i++)
 	{
 		if (arr[i] < smol)
 		{
-			smol = arr[i]; // Smol nam je referenca na i-ti clan u nizu, odnosno smol nam je referenca na najmanji clan u nizu
+			smol = arr[i]; // smol is the smallest one
 		}
 		else if (arr[i] > bigg)
 		{
-			bigg = arr[i]; // Big nam je referenca na i-ti clan u nizu, odnosno big nam je referenca na najveci clan u nizu
+			bigg = arr[i]; // bigg is the biggest one
 		}
 	}
 }
